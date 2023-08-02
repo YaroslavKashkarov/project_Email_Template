@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Email Template</title>
   <style type="text/css">
+    /* Import fonts */
     @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Russo+One&display=swap');
 
     table {
@@ -49,6 +50,67 @@
       text-transform: uppercase;
     }
 
+    .image-container {
+      position: relative;
+      background: linear-gradient(90deg, #667EEA 0%, #624BA2 145.36%);
+      z-index: 0;
+    }
+
+    .image {
+      position: relative;
+      display: block;
+      width: 290px;
+      height: 250px;
+      z-index: +2;
+    }
+
+    .img-overlay {
+      position: absolute;
+      top: 3px;
+      left: -86px;
+      width: 373.2px;
+      height: 156.25px;
+    }
+
+    .img-overlay-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 386.44px;
+      height: 141.11px;
+      mix-blend-mode: color-dodge;
+    }
+
+    .img-overlay-footer {
+      position: absolute;
+      top: 248px;
+      left: 213px;
+      width: 386.44px;
+      height: 141.11px;
+      z-index: -1;
+      mix-blend-mode: color-dodge;
+    }
+
+    .img-overlay-bottom {
+      position: absolute;
+      top: 372px;
+      left: 213px;
+      width: 386.44px;
+      height: 141.11px;
+      z-index: -1;
+      mix-blend-mode: color-dodge;
+    }
+
+    .footer-overlay-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 386.44px;
+      height: 141.11px;
+      z-index: 0;
+      mix-blend-mode: color-dodge;
+    }
+
     .button-white {
       padding: 8px 62.73px 8px 58.35px;
       color: #656FD4;
@@ -79,9 +141,64 @@
       padding-top: 12px;
     }
 
-    @media screen and (max-width: 599.98px) {}
+    /* Media query for tablets and mobile devices */
+    @media screen and (max-width: 768px) {
 
-    @media screen and (max-width: 399.98px) {}
+      .typography-first,
+      .typography-second {
+        font-size: 24px !important;
+      }
+
+      .mobile-padding {
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+      }
+
+      .image-container {
+        height: auto !important;
+        padding: 20px !important;
+      }
+
+      .image {
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      .button-white,
+      .button-violet {
+        display: block !important;
+        width: 100% !important;
+        padding: 12px 0 !important;
+      }
+
+      .line {
+        width: 100% !important;
+        padding-top: 8px !important;
+      }
+    }
+
+    /* Media request for mobile devices */
+    @media screen and (max-width: 480px) {
+
+      .typography-first,
+      .typography-second {
+        font-size: 20px !important;
+      }
+
+      .mobile-padding {
+        padding-right: 20px !important;
+        padding-left: 20px !important;
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+      }
+
+      .button-white,
+      .button-violet {
+        font-size: 16px !important;
+      }
+    }
   </style>
 
   <!--[if (gte mso 9)|(IE)]>
@@ -127,8 +244,9 @@
         <td>
       <![endif]-->
 
-      <!-- Header start -->
-      <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation"
+      <!-- Header blocks start -->
+
+      <table class="mobile-padding" align="center" border="0" cellspacing="0" cellpadding="0" role="presentation"
         style="font-family: Russo One, Roboto, Arial, Helvetica, sans-serif; background-color: #ffffff; Margin:0;padding:0;width: 100%;max-width: 600px;">
         <tr>
           <td>
@@ -154,7 +272,7 @@
                       </td>
                     </tr>
                     <tr>
-                      <td>
+                      <td style="width: 406px;">
                         <table border="0" cellspacing="0" cellpadding="0" role="presentation">
                           <tr>
                             <td style="padding: 12px 153px 32px 41px; width: 420px;">
@@ -177,22 +295,19 @@
             </table>
           </td>
         </tr>
-        <!-- Header end -->
 
-        <!-- Main start -->
+        <!-- Header blocks end -->
+
+        <!-- Main blocks start -->
+
         <tr>
-          <td>
-            <img src="img/background-header.png" alt="background-header" width="386.44px" height="141.11px"
-              style="position: absolute;">
-          </td>
-        </tr>
-        <tr>
-          <td style="background: linear-gradient(90deg, #667EEA 0%, #624BA2 145.36%);
-          ; height: 391px;">
+          <td class="image-container" style="height: 390px;">
             <table border="0" cellspacing="0" cellpadding="0" role="presentation">
               <tr>
                 <td style="padding: 70px 0 70px 0;">
-                  <img src="img/main-img.png" alt="main-img" width="290px" height="250px" style="position: relative;">
+                  <img class="image" src="img/img_1.png" alt="img_1">
+                  <img class="img-overlay-header" src="img/background-header.png" alt="background-header">
+                  <img class="img-overlay-footer" src="img/background-footer.png" alt="background-footer">
                 </td>
                 <td style="padding: 0 40px 0 22px; width: 248px; height: 88px;">
                   <span style="color: #FfffFF;
@@ -254,8 +369,9 @@
                     </tr>
                   </table>
                 </td>
-                <td style="padding: 70px 0 70px 0;">
-                  <img src="img/main-img-1.png" alt="main-img" width="290px" height="250px">
+                <td class="image" style="padding: 70px 0 70px 0;">
+                  <img class="img-overlay" src="img/background.png" alt="background-header">
+                  <img class="image" src="img/img_2.png" alt="img_2" width="290px" height="250px">
                 </td>
               </tr>
             </table>
@@ -263,12 +379,14 @@
         </tr>
 
         <tr>
-          <td style="background: linear-gradient(90deg, #667EEA 0%, #624BA2 145.36%); padding: 70px 130px 0 130px;
+          <td class="image-container" style="padding: 70px 130px 0 130px;
           ">
             <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation">
               <tr>
                 <td align="center">
-                  <img src="img/main-img-2.png" alt="main-img-2">
+                  <img class="img-overlay-header" src="img/background-header.png" alt="background-header">
+                  <img class="image" src="img/img_3.png" alt="img">
+                  <img class="img-overlay-bottom" src="img/background-footer.png" alt="background-footer">
                 </td>
               </tr>
               <tr>
@@ -298,8 +416,9 @@
             </table>
           </td>
         </tr>
-        <!-- Main end -->
+        <!-- Main blocks end -->
 
+        <!-- Footer blocks start -->
         <tr>
           <td>
             <table border="0" cellspacing="0" cellpadding="0" role="presentation">
@@ -344,9 +463,11 @@
           </td>
         </tr>
 
+        <!-- Footer blocks end -->
 
-        <!-- Footer start -->
       </table>
     </div>
   </center>
 </body>
+
+</html>
