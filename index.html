@@ -144,20 +144,12 @@
     /* Media query for tablets and mobile devices */
     @media screen and (max-width: 768px) {
 
-      .typography-first,
-      .typography-second {
-        font-size: 24px !important;
-      }
-
       .mobile-padding {
         padding-right: 10px !important;
         padding-left: 10px !important;
-        padding-top: 10px !important;
-        padding-bottom: 10px !important;
       }
 
       .image-container {
-        height: auto !important;
         padding: 20px !important;
       }
 
@@ -166,11 +158,19 @@
         height: auto !important;
       }
 
+      .img-overlay-header,
+      .img-overlay-footer,
+      .img-overlay-bottom,
+      .footer-overlay-top {
+        display: none;
+      }
+
       .button-white,
       .button-violet {
         display: block !important;
         width: 100% !important;
         padding: 12px 0 !important;
+        font-size: 16px !important;
       }
 
       .line {
@@ -179,7 +179,8 @@
       }
     }
 
-    /* Media request for mobile devices */
+    /* Media query for mobile versions */
+
     @media screen and (max-width: 480px) {
 
       .typography-first,
@@ -190,8 +191,6 @@
       .mobile-padding {
         padding-right: 20px !important;
         padding-left: 20px !important;
-        padding-top: 20px !important;
-        padding-bottom: 20px !important;
       }
 
       .button-white,
